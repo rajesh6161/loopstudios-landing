@@ -30,7 +30,42 @@ const LandingPage = () => {
                 </li>
               </ul>
             </div>
+
+            <div className="sidebar">
+              <div class="header"></div>
+              <input
+                type="checkbox"
+                class="openSidebarMenu"
+                id="openSidebarMenu"
+              />
+              <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+              </label>
+              <div id="sidebarMenu">
+                <h1>loopstudios</h1>
+                <ul class="sidebarMenuInner">
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+                  <li>
+                    <a href="#">Products</a>
+                  </li>
+                  <li>
+                    <a href="#">Support</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+
           <div className="box">
             <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
           </div>
@@ -88,6 +123,42 @@ const LandingPage = () => {
             <div className="imgBox b8">
               <h2>MAKE IT FISH EYE</h2>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer">
+        <div className="container">
+          <div className="leftBox">
+            <h1>loopstudios</h1>
+            <div className="links">
+              <ul>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Events</a>
+                </li>
+                <li>
+                  <a href="#">Products</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="rightBox">
+            <div className="social">
+              <i className="fab fa-facebook-square"></i>
+              <i className="fab fa-twitter"></i>
+              <i className="fab fa-pinterest"></i>
+              <i className="fab fa-instagram"></i>
+            </div>
+            <p>&copy; Loopstudios All rights reserved</p>
           </div>
         </div>
       </div>

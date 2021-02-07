@@ -19,8 +19,7 @@ body {
   margin-right: 200px;
   position: relative;
 }
-.navbar {
-}
+
 .navbar .leftBox h1 {
   color: #fff;
   font-family: 'Alata';
@@ -42,15 +41,18 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.sidebar {
+  display: none;
+}
 
 .box {
   width: 55%;
   border: 2px solid #fff;
   padding-left: 30px;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 .box h1 {
-  font-size: 70px;
+  font-size: 50px;
   color: #fff;
   font-family: 'Josefin Sans';
 }
@@ -63,8 +65,7 @@ body {
 .secondSection .container {
   position: relative;
 }
-.secondSection .leftBox {
-}
+
 .secondSection .rightBox {
   width: 48%;
   height: 50%;
@@ -75,8 +76,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0px 30px 0px 30px; */
-
   background-color: #fff;
   font-family: 'Josefin Sans';
 }
@@ -159,4 +158,348 @@ body {
   background: url('../assets/desktop/image-fisheye.jpg');
   background-position: center;
   background-size: cover;
+}
+
+/* footer */
+.footer {
+  background-color: black;
+  color: #fff;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer h1 {
+  font-family: 'Alata';
+}
+.footer ul {
+  padding: 0;
+}
+.footer ul li {
+  list-style: none;
+  display: inline;
+  padding-right: 25px;
+  font-size: 16px;
+  font-family: 'Josefin Sans';
+}
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+.social {
+  padding-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.social i {
+  padding: 5px;
+  font-size: 20px;
+}
+.footer .rightBox p {
+  font-family: 'Josefin Sans';
+}
+
+/* sidebar css */
+/* .header {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  background-color: #fc466b;
+  position: fixed;
+  height: 60px !important;
+  overflow: hidden;
+  z-index: 10;
+} */
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+.mainInner {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.mainInner div {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+#sidebarMenu {
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  margin-top: -28px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  background: black;
+  z-index: 1;
+}
+#sidebarMenu h1 {
+  color: #fff;
+  font-family: 'Alata';
+  font-size: 28px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.sidebarMenuInner {
+  position: absolute;
+  top: 25%;
+  /* left: 40%; */
+  margin-left: -30px;
+  /* transform: translateX(-40%); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.sidebarMenuInner li {
+  list-style: none;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+
+  padding: 15px;
+  cursor: pointer;
+  font-family: 'Josefin Sans';
+}
+.sidebarMenuInner li span {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebarMenuInner li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+input[type='checkbox']:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+input[type='checkbox'] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 75px;
+  right: 15px;
+  height: 22px;
+  width: 22px;
+}
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+@media only screen and (max-width: 700px) {
+  .mainPage {
+    background: url('../assets/mobile/image-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -22px;
+    padding-bottom: 100px;
+  }
+  .container {
+    padding-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+  }
+  .navbar .leftBox {
+    position: absolute;
+    left: 0;
+  }
+
+  .navbar .leftBox h1 {
+    color: #fff;
+    font-family: 'Alata';
+    font-size: 24px;
+  }
+  .navbar .rightBox {
+    float: none;
+    right: 0;
+    position: none;
+    top: 0px;
+    display: none;
+  }
+  .sidebar {
+    display: inline;
+  }
+  /* second section */
+  .secondSection {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .secondSection .container {
+    position: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secondSection .leftBox img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .secondSection .rightBox {
+    width: 100%;
+    height: 50%;
+    position: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: 'Josefin Sans';
+  }
+  .secondSection .rightBox .content {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  /* third section */
+  .thirdSection {
+    margin-bottom: 130px;
+  }
+  .thirdSection h1 {
+    font-family: 'Josefin Sans';
+    text-align: center;
+  }
+  .thirdSection .container {
+    margin-top: -0px;
+  }
+  .flex-r {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn {
+    position: absolute;
+    bottom: -60px;
+  }
+  .flex-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .imgBox {
+    height: 150px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+  /* footer */
+  .footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .social {
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer ul li {
+    list-style: none;
+    display: block;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: 'Josefin Sans';
+  }
+  .footer .rightBox {
+    margin-top: -30px;
+  }
+  .footer {
+    background-color: black;
+    color: #fff;
+    padding-bottom: 25px;
+    margin-top: 25px;
+  }
+  .box {
+    width: 90%;
+    border: 2px solid #fff;
+    padding-left: 30px;
+    margin-top: 30%;
+  }
+  .box h1 {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Josefin Sans';
+  }
 }
